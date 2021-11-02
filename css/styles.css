@@ -1,0 +1,138 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.world {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(../img/zvezdnoe-nebo.jpg);
+    background-size: cover;
+    position: relative;
+}
+.doroga {
+    height: 200px;
+    width: 100%;
+    display: block;
+    background-image: url(../img/doroga.png);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0%;
+    z-index: 1;
+}
+.kyst {
+    height: 200px;
+    width: 100%;
+    display: block;
+    background-image: url(../img/870-8708868_asphalt-road-road-asphalt.png);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20%;
+    z-index: 1;
+}
+.wrap{
+    width: 290px;
+    height: 180px;
+    position: absolute;
+    transform: scale(-1,1);
+    background: transparent;
+    left: 50%;
+    bottom: 5%;
+    z-index: 5;
+    animation: MoveCar 10s linear infinite;
+}
+.korpys{
+    margin-left: 5px;
+    margin-top: 20px;
+    position: absolute;
+}
+.lampa {
+    width: 30px;
+    height: 25px;
+    background: blue;
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    left: 69px;
+    animation: blick 10s linear infinite;
+}
+.koleso_pervoe{
+    position: absolute;
+    left: 2px;
+    top: 98px;
+    animation: kryt 5s linear infinite;
+}
+.koleso_vtoroe{
+    position: absolute;
+    top: 98px;
+    left: 196px;
+    animation: kryt2 5s linear infinite;
+}
+@keyframes MoveCar {
+    0% {
+        left: 0%;
+    }
+    40% {
+        transform: scale(-1, 1);
+    }
+    49% {
+        transform: scale(1,1);
+    }
+    50% {
+        left: 85%;
+
+    }
+    91% {
+        transform: scale(1,1); 
+    }
+    100% {
+        left: 0%;
+    }
+
+}
+@keyframes blick{
+    0%{
+
+    }
+    10% {
+        background: red;
+    }
+    20% {
+        background: blue;
+    }
+    30% {
+        background: red;
+    }
+    40% {
+        background: blue;
+    }
+    50% {
+        background: red;
+    }
+    60% {
+        background: blue;
+    }
+    70% {
+        background: red;
+    }
+    80%{
+        background: blue;
+    }
+    90%{
+        background: red;
+    }
+    100%{
+        background: blue;
+    }
+}
+@keyframes kryt {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+@keyframes kryt2 {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
